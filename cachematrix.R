@@ -1,5 +1,3 @@
-## Put comments here that give an overall description of what your
-## functions do
 ## A function that creates a matrix that can cache its inverse for the input
 
 CacheMatrix <- function(x = matrix()) {
@@ -16,7 +14,6 @@ CacheMatrix <- function(x = matrix()) {
             getsolve =getsolve)
 }
 ###
-## Return a matrix that is the inverse of 'x'
 ## This function computes an inverse of the previous matrix and is 
 ## returned by the CacheMatrix
 
@@ -27,7 +24,7 @@ CacheSolve <- function(x, ...) {
                 return(z)
         }
       data <- x$get()
-        z <-solve(data, ...)
+        z <- solve(data, ...)
         x$setsolve(z)
         z
 }
