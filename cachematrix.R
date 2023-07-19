@@ -1,13 +1,13 @@
 
 
-## Write short comment here
+## Write a short comment here 
 
 CacheMatrix <- function(x = matrix()) {
   z <- NULL
-  set <<- function(y){
-       x <<- y
-       z <<- NULL
-  }   
+  set <- function(y){
+        x <<- y
+        z <<- NULL
+}   
      get <- function() x
      setInverse <- function(solveMatrix) z <<- solveMatrix
      getInverse <- function() z
@@ -19,12 +19,10 @@ CacheMatrix <- function(x = matrix()) {
 CacheSolve <- function(x, ...){
   z <- x$getInverse()
   if(!is.null(z)) {
-       message("getting inversed matrix")
-       return(z)
+    message("getting inversed matrix")
+    return(z)
   }
   data <- x$get()
   z <- solve(data, ...)
-  x$setInverse(z)
-  z
-  }
-
+  x$setInverse
+}
