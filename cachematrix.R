@@ -12,20 +12,20 @@ CacheMatrix <- function(x = matrix()) {
      setInverse <- function(solveMatrix) z <<- solveMatrix
      getInverse <- function() z
      list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
-}
+} 
 
 ##This is the function that computes the inverse of the matrix returned by CacheMatrix
 
 
 
 CacheSolve <- function(x, ...){
-     z <- x$getInverse()
-     if(!is.null(z)) {
-     message("getting cached data")
+ z <- x$getInverse()
+   if(!is.null(z)) {
+   message("getting cached data")
           return(z)
      }    
-     data <- x$get()
-     z <- solve(data, ...)
-     x$setsolve(z)
-     z
+   data <- x$get()
+   z <- solve(data, ...)
+   x$setsolve(z)
+   z
 }
