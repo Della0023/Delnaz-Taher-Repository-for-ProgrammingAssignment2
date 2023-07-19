@@ -1,3 +1,5 @@
+
+
 ## Write short comment here
 
 CacheMatrix <- function(x = matrix()) {
@@ -9,7 +11,7 @@ CacheMatrix <- function(x = matrix()) {
      get <- function() x
      setInverse <- function(solveMatrix) z <<- solveMatrix
      getInverse <- function() z
-     list(set = set, get = get, setInverse = setInverse, getInverse = getInverse
+     list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 }
 
 
@@ -25,4 +27,5 @@ CacheSolve <- function(x, ...){
   z <- solve(data, ...)
   x$setInverse(z)
   z
-}
+  }
+
