@@ -1,6 +1,5 @@
 ## Put comments here that give an overall description of what your
 ## functions do
-
 ## A function that creates a matrix that can cache its inverse for the input
 
 CacheMatrix <- function(x = matrix()) {
