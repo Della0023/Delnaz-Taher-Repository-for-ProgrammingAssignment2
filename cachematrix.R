@@ -21,11 +21,11 @@ CacheMatrix <- function(x = matrix()) {
 CacheSolve <- function(x, ...){
  z <- x$getInverse()
    if(!is.null(z)) {
-   message("getting cached data")
+   message("getting inversed matrix")
           return(z)
      }    
    data <- x$get()
    z <- solve(data, ...)
-   x$setsolve(z)
+   x$setInverse(z)
    z
 }
