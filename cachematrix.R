@@ -19,7 +19,7 @@ CacheMatrix <- function(x = matrix()) {
 ###
 ## Return a matrix that is the inverse of 'x'
 ## This function computes an inverse of the previous matrix and is 
-returned by the CacheMatrix
+## returned by the CacheMatrix
 
 CacheSolve <- function(x, ...) {
         z <- x$getsolve()
